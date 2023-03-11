@@ -1,0 +1,219 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    border: 1px solid #000;
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wrapper_chitiet{
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #ef0404;
+}
+.hinhanh_sanpham{
+    border:1px solid #000;
+    float: left;
+    width: 15%;
+    margin: 30px 10px;
+}
+.chitiet_sanpham{
+    float: left;
+    width: 50%;
+    margin: 20px 10px;
+}
+
+.addtocart{
+    border-radius: 8px;
+    background: #1dfaef;
+    color: #000;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.addtocart:hover{
+    background: #e39090;
+}
+
+.header{
+    /* background-image: url(../images/donghocaocap_2_1280x720-800-resize.jpg); */
+    background-image: url(../images/background_header2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 250px;
+    /* border: 1px solid #ff80ff; */
+    height: 250px;
+    width: 100%;
+}
+.menu{
+    border: 1px solid #1aff8c;
+    height: 50px;
+    width: 100%;
+    background: #00e6ac;
+}
+ul.list_menu{
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    list-style:none;
+    margin: 0 auto;
+    line-height: 27px;
+}
+
+ul.list_menu li:hover {
+    background: burlywood;
+}
+
+ul.list_menu li a{
+    text-decoration: none;
+    text-align: center;
+    color: #3333ff;
+}
+ul.list_menu li{
+    float: left;
+    margin: 7px;
+    padding: 5px;
+} 
+#main{
+    border: 1px solid #ffffff;
+    height: auto;
+    width: 100%;
+}
+
+.background1{
+    background-image: url(../images/background_header.jpg);
+}
+
+
+.sidebar{
+    border: 1px solid #000066;
+    height: 390px;
+    width: 99%;
+    margin: 5px 0;
+    float: left;
+}
+/* .sidebar-color{
+    border: 1px solid #3333ff;
+} */
+ul.list_sidebar{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style:none;
+    line-height: 25px;
+}
+
+ul.list_sidebar li:hover {
+    background: burlywood;
+}
+
+ul.list_sidebar li a{
+    text-decoration: none;
+    text-align: center;
+    color: #3333ff;
+    display: inline-block;
+}
+ul.list_sidebar li{
+    margin: 2px;
+    padding:0 5px;
+    border-radius: 5px;
+    font-size: smaller;
+} 
+
+
+
+.maincontent{
+    /* border: 1px solid #686565; */
+    height: auto;
+    width: 100%;
+    margin: 15px 0;
+    float: right;
+    background-color: darkgrey;
+}
+div.product_list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+/* div.product_list a{
+    
+} */
+/* div.product_list div{
+    width: 15%;
+} */
+div.product_list a{
+    border: 1px solid #8f8f8f;
+    box-shadow: 1px 1px 3px 3px rgb(85, 85, 85);
+    margin: 5px 0;
+    float: left;
+    background: aquamarine;
+    height: auto;
+}
+/* div.product_list div a{
+    text-decoration: none;
+} */
+/* div.product_list div img{
+    width: 100%;
+} */
+
+
+.h_product{
+    height: 120px;
+}
+.h_pro_2{
+    padding:20px 0;
+}
+p.price_product{
+    margin: 2px;
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+p.title_product{
+    margin: 2px;
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.footer{
+    border: 1px solid #6c6565;
+    height: 150px;
+    width: 100%;
+    background:#3b3b3b;
+}
+
+p.footer_copyright{
+    padding-top: 10px;
+    text-align: center;
+    color:#dbcaca;
+}
+.clear{
+    clear: both;
+}
+
+.cate_product{
+    text-align: center;
+    color: #443b3b;
+    font-size: 16px;
+    margin: 2px 0 2px 0;
+}
+
+div.col-md-2{
+    padding: 0 5px;
+}
+
+.title_danhmuc{
+    font-family:sans-serif;
+    font-weight: bolder;
+    font-size: medium;
+    padding-top: 15px;
+}

@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "afterDelay",
+    "html.autoCreateQuotes": true,
+    "php.suggest.basic": true,
+    "php.validate.enable": true
+}
