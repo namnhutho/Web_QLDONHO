@@ -3,10 +3,10 @@ $sql_lietke_nv = "SELECT * FROM `nhanvien` ORDER BY `nhanvien`.`NV_MA` ASC";
 $query_lietke_nv = mysqli_query($connect, $sql_lietke_nv);
 ?>
 
-<div class="table-responsive-lg" style="padding : 50px;">
+
     <p class="title-p">Liệt kê nhân viên</p>
 
-    <table class="table table-hover table-td" border="1px" width="75%" style="border-collapse: collapse">
+    <table class="table table-hover table-td " border="1px" width="100%" style=" border-collapse: collapse">
         <tr class="bg-warning">
             <th>Mã nhân viên</th>
             <th>Họ tên nhân viên</th>

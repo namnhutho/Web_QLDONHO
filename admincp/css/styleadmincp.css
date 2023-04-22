@@ -42,3 +42,29 @@ h3.title_admin{
 .table-td td{
     padding: 0;
 }
+
+
+.width_table {
+    width: fit-content;
+    border: 1px solid #000;
+    padding: 20px 25px;
+    box-shadow: 10px 10px 12px 12px lightblue;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.nav_dangxuat{
+    margin: 5px 85%;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    font-family: cursive;
+    color: red;
+    cursor: pointer;
+    background-color: lightblue;
+    
+}
+.nav_dangxuat:hover{
+    color: black;
+    text-decoration: none;
+}

@@ -1,4 +1,8 @@
-<div class="table-responsive-sm " style="margin-top:20px; border:1px solid #000; padding:15px; box-shadow: 10px 10px 12px 12px lightblue;">
+<div class="table-responsive-sm " style="    width: 45%;
+    margin: 20px 28%;
+    border: 1px solid #000;
+    padding: 15px;
+    box-shadow: 10px 10px 12px 12px lightblue;">
     <p class="title-p">Thêm sản phẩm</p>
     <table class="table" border="1px" width="100%" style="border-collapse: collapse">
         <form method="POST" action="modules/quanlysp/xuly.php" enctype="multipart/form-data">

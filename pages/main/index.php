@@ -10,7 +10,7 @@ $query_pro = mysqli_query($connect, $sql_pro);
     while ($row = mysqli_fetch_array($query_pro)) {
     ?>
         <div class="col-md-2">
-            <a href="index.php?quanly=sanpham&id=<?php echo $row['SP_MASANPHAM'] ?>">
+            <a href="index.php?quanly=sanpham&id=<?php echo $row['SP_MASANPHAM'] ?>" style="text-decoration: none;">
                 <img class="img img-responsive" width="100%" src="../admincp/modules/quanlysp/uploads/<?php echo $row['SP_HINHANH'] ?>">
                 <div class="h_product">
                     <p class="title_product"><?php echo $row['SP_TENSANPHAM'] ?></p>

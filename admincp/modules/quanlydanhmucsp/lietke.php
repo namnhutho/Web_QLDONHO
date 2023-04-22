@@ -3,7 +3,7 @@ $sql_lietke_danhmucsp = "SELECT * FROM `loai_sp` ORDER BY `loai_sp`.`LSP_TEN` AS
 $query_lietke_danhmucsp = mysqli_query($connect, $sql_lietke_danhmucsp);
 ?>
 <br><br>
-<div class="table-responsive-sm" style="border:1px solid #000; padding:20px 25px; box-shadow: 10px 10px 12px 12px lightblue;">
+<div class="table-responsive-sm" style="display:block; width:50%; float:left; margin: 0 30px; border:1px solid #000; padding: 15px; box-shadow: 10px 10px 12px 12px lightblue; ">
     <p class="title-p">Liệt kê danh mục sản phẩm</p>
 
     <table class="table" border="1px" width="75%" style="border-collapse: collapse">

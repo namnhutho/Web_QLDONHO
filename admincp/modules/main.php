@@ -1,8 +1,8 @@
 <div class="clear"></div>
 <!-- <p>main ADMIN</p> -->
 
-<div class="container">
-    <div class="">
+<div class="container-fluid" width="100%" height="auto">
+    <div class="col-lg-12">
         <?php
         if (isset($_GET['action']) && $_GET['query']) {
             $tam = $_GET['action'];
@@ -26,9 +26,11 @@
             include("./modules/quanlynhanvien/lietke.php");
         } elseif ($tam == 'quanlynhanvien' && $query == 'sua') {
             include("modules/quanlynhanvien/sua.php");
-        } elseif ($tam == 'quanlylienhe' && $query == 'them') {
+        }
+         elseif ($tam == 'quanlylienhe' && $query == 'them') {
             include("./modules/quanlylienhe/lietke.php");
-        } else {
+        }
+        else {
             include("./modules/dashboard.php");
         }
         ?>

@@ -1,14 +1,119 @@
 
 <?php
-// echo $_GET['idsanpham'];
-
 session_start();
 include("../../admincp/config/config.php");
+//cong so luong
+if (isset($_GET['cong'])) {
+    $id = $_GET['cong'];
+    foreach ($_SESSION['cart'] as $cart_item) {
+        if ($cart_item['masp'] != $id) {
+            $product[] = array(
+                'masp' => $cart_item['masp'],
+                'maloaisp' => $cart_item['maloaisp'],
+                'tensp' => $cart_item['tensp'],
+                'giasp' => $cart_item['giasp'],
+                'soluong' => $cart_item['soluong'],
+                'hinhanh' => $cart_item['hinhanh']
+            );
+            $_SESSION['cart'] = $product;
+        } else {
+            $tangsoluong = $cart_item['soluong'] + 1;
+            if ($cart_item['soluong'] <= 9) {
+
+                $product[] = array(
+                    'masp' => $cart_item['masp'],
+                    'maloaisp' => $cart_item['maloaisp'],
+                    'tensp' => $cart_item['tensp'],
+                    'giasp' => $cart_item['giasp'],
+                    'soluong' => $tangsoluong,
+                    'hinhanh' => $cart_item['hinhanh']
+                );
+            } else {
+                $product[] = array(
+                    'masp' => $cart_item['masp'],
+                    'maloaisp' => $cart_item['maloaisp'],
+                    'tensp' => $cart_item['tensp'],
+                    'giasp' => $cart_item['giasp'],
+                    'soluong' => $cart_item['soluong'],
+                    'hinhanh' => $cart_item['hinhanh']
+                );
+            }
+            $_SESSION['cart'] = $product;
+        }
+    }
+    header('Location:../index.php?quanly=giohang');
+}
+
+//tru so luong
+if (isset($_GET['tru'])) {
+    $id = $_GET['tru'];
+    foreach ($_SESSION['cart'] as $cart_item) {
+        if ($cart_item['masp'] != $id) {
+            $product[] = array(
+                'masp' => $cart_item['masp'],
+                'maloaisp' => $cart_item['maloaisp'],
+                'tensp' => $cart_item['tensp'],
+                'giasp' => $cart_item['giasp'],
+                'soluong' => $cart_item['soluong'],
+                'hinhanh' => $cart_item['hinhanh']
+            );
+            $_SESSION['cart'] = $product;
+        } else {
+            $giamsoluong = $cart_item['soluong'] - 1;
+            if ($cart_item['soluong'] > 1) {
+
+                $product[] = array(
+                    'masp' => $cart_item['masp'],
+                    'maloaisp' => $cart_item['maloaisp'],
+                    'tensp' => $cart_item['tensp'],
+                    'giasp' => $cart_item['giasp'],
+                    'soluong' => $giamsoluong,
+                    'hinhanh' => $cart_item['hinhanh']
+                );
+            } else {
+                $product[] = array(
+                    'masp' => $cart_item['masp'],
+                    'maloaisp' => $cart_item['maloaisp'],
+                    'tensp' => $cart_item['tensp'],
+                    'giasp' => $cart_item['giasp'],
+                    'soluong' => $cart_item['soluong'],
+                    'hinhanh' => $cart_item['hinhanh']
+                );
+            }
+            $_SESSION['cart'] = $product;
+        }
+    }
+    header('Location:../index.php?quanly=giohang');
+}
+//xoa san pham
+if (isset($_SESSION['cart']) && isset($_GET['xoa'])) {
+    $id = $_GET['xoa'];
+    foreach ($_SESSION['cart'] as $cart_item) {
+        if ($cart_item['masp'] != $id) {
+            $product[] = array(
+                'masp' => $cart_item['masp'],
+                'maloaisp' => $cart_item['maloaisp'],
+                'tensp' => $cart_item['tensp'],
+                'giasp' => $cart_item['giasp'],
+                'soluong' => $soluong + 1,
+                'hinhanh' => $cart_item['hinhanh']
+            );
+        }
+        $_SESSION['cart'] = $product;
+        header('Location:../index.php?quanly=giohang');
+    }
+}
+
+//xoa tat ca
+if (isset($_GET['xoatatca']) && $_GET['xoatatca'] == 1) {
+    unset($_SESSION['cart']);
+    header('Location:../index.php?quanly=giohang');
+}
 
 if (isset($_POST['themgiohang'])) {
     // session_destroy();
     $id = $_GET['idsanpham'];
-    $soluong = $_POST['them'];
+    $soluong = 1;
     $sql = "SELECT * FROM `sanpham` WHERE `sanpham`.`SP_MASANPHAM`='" . $id . "' LIMIT 1";
     $query = mysqli_query($connect, $sql);
     $row = mysqli_fetch_array($query);
@@ -17,8 +122,8 @@ if (isset($_POST['themgiohang'])) {
         $new_product = array(array(
             'masp' => $id,
             'maloaisp' => $row['LSP_MA'],
-            'tensp' => $row['SP_MASANPHAM'],
-            'giasp' => $row['SP_GIA'],
+            'tensp' => $row['SP_TENSANPHAM'],
+            'giasp' => $row['SP_GIABAN'],
             'soluong' => $soluong,
             'hinhanh' => $row['SP_HINHANH']
         ));
@@ -33,7 +138,7 @@ if (isset($_POST['themgiohang'])) {
                         'maloaisp' => $cart_item['maloaisp'],
                         'tensp' => $cart_item['tensp'],
                         'giasp' => $cart_item['giasp'],
-                        'soluong' => $soluong += 1,
+                        'soluong' => $soluong + 1,
                         'hinhanh' => $cart_item['hinhanh']
                     );
                     $found = true;
@@ -59,19 +164,8 @@ if (isset($_POST['themgiohang'])) {
             $_SESSION['cart'] = $new_product;
         }
     }
+    header('Location:../index.php?quanly=giohang');
 }
 
 ?>
-<?php
-header('Location:../index.php?quanly=giohang');
-?>
 
-
-<?php
-// if (isset($_SESSION['cart'])) {
-//     echo '<pre>';
-//     print_r($_SESSION['cart']);
-
-//     echo '</pre>';
-// }
-?>

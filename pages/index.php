@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 
     <!-- <link rel="stylesheet" href="../../css/contact.css" /> -->
-
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 
 <body>
@@ -24,6 +24,7 @@
             include("../pages/menu.php");
             include("../pages/main.php");
             include("../pages/footer.php");
+            // include("./pages/quanlydonhang/lietke.php");
             ?>
         </div>
 

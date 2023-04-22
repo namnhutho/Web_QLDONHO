@@ -1,3 +1,55 @@
+<?php
+// include('../../admincp/config/config.php');
+if (isset($_POST['guithongtin'])) {
+    //thêm
+
+    $tenlh = $_POST['ten'];
+    $email = $_POST['diachimail'];
+    $message = $_POST['tinnhan'];
+    $sql_them = "INSERT INTO `lienhe1`(`LH_HOTEN`, `LH_EMAIL`, `LH_LOINHAN`) 
+                    VALUES ('" . $tenlh . "','" . $email . "','" . $message . "')";
+    $sql_add = mysqli_query($connect, $sql_them);
+}
+?>
+
+<div class="container">
+    <div class=" contact-container">
+        <div class="left-col">
+            <img class="logo" src="../images/logo1.png" />
+        </div>
+        <div class="right-col">
+            <!-- <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <div class="description"></div>
+            </div> -->
+
+            <h1>Liên hệ với tôi</h1>
+            <p style="font-size: 13px;">
+                Chúng tôi rất vui khi nhận được sự hỗ trợ của bạn, vui lòng để lại tin nhắn cho chúng tôi.
+                Yêu cầu của bạn sẽ được xử lý và phản hồi trong thời gian sớm nhất.
+            </p>
+
+            <form class="form form-group" id="contact-form" method="post">
+
+                <label for="name">Họ tên của bạn</label>
+                <input type="text" id="name" name="ten" placeholder="Nhập vào họ tên của bạn" required />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="diachimail" placeholder="Địa chỉ Email" required />
+                <label for="message">Tin nhắn</label>
+                <textarea rows="4" placeholder="Lời nhắn của bạn" id="message" name="tinnhan" required></textarea>
+                <a href="javascript:void(0)"><button class="form-control" type="submit" id="submit" name="guithongtin">Gửi</button></a>
+            </form>
+
+            <div id="error"></div>
+            <div id="success-msg"></div>
+        </div>
+    </div>
+
+</div>
+
 <style>
     :root {
         --primary-color: #010712;
@@ -70,7 +122,7 @@
         color: var(--secondary-color);
         font-size: 0.9rem;
         letter-spacing: 0.01rem;
-        width: 40vw;
+        /* width: 40vw; */
         margin: 0.25rem 0;
     }
 
@@ -314,41 +366,6 @@
         color: rgb(15, 23, 235);
     }
 </style>
-<div class="container">
-    <div class=" contact-container">
-        <div class="left-col">
-            <img class="logo" src="../images/logo1.png" />
-        </div>
-        <div class="right-col">
-            <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="checkbox">
-                    <input type="checkbox" id="checkbox" />
-                    <div class="slider round"></div>
-                </label>
-                <div class="description"></div>
-            </div>
-
-            <h1>Liên hệ với tôi</h1>
-            <p style="font-size: 13px;">
-                Chúng tôi rất vui khi nhận được sự hỗ trợ của bạn, vui lòng để lại tin nhắn cho chúng tôi.
-                Yêu cầu của bạn sẽ được xử lý và phản hồi trong thời gian sớm nhất.
-            </p>
-
-            <form class="form form-group" id="contact-form" method="post">
-                <label for="name">Họ tên của bạn</label>
-                <input type="text" id="name" name="name" placeholder="Nhập vào họ tên của bạn" required />
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Địa chỉ Email" required />
-                <label for="message">Tin nhắn</label>
-                <textarea rows="4" placeholder="Lời nhắn của bạn" id="message" name="message" required></textarea>
-                <a href="javascript:void(0)"><button class="form-control" type="submit" id="submit" name="submit">Gửi</button></a>
-            </form>
-            <div id="error"></div>
-            <div id="success-msg"></div>
-        </div>
-    </div>
-
-</div>
 
 
 <script>

@@ -42,11 +42,12 @@ body{
 
 .header{
     /* background-image: url(../images/donghocaocap_2_1280x720-800-resize.jpg); */
+    
     background-image: url(../images/background_header2.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 250px;
+    background-size: 100% 260px;
     /* border: 1px solid #ff80ff; */
-    height: 250px;
+    height: 260px;
     width: 100%;
 }
 .menu{
@@ -108,19 +109,19 @@ ul.list_sidebar{
 }
 
 ul.list_sidebar li:hover {
-    background: burlywood;
+    background: rgb(214, 233, 255);
 }
 
 ul.list_sidebar li a{
     text-decoration: none;
     text-align: center;
-    color: #3333ff;
+    color: #222222;
     display: inline-block;
 }
 ul.list_sidebar li{
     margin: 2px;
     padding:0 5px;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: smaller;
 } 
 
@@ -132,7 +133,7 @@ ul.list_sidebar li{
     width: 100%;
     margin: 15px 0;
     float: right;
-    background-color: darkgrey;
+    /* background-color: darkgrey; */
 }
 div.product_list{
     padding: 0;
@@ -194,7 +195,8 @@ p.title_product{
 p.footer_copyright{
     padding-top: 10px;
     text-align: center;
-    color:#dbcaca;
+    color:#e9e1e1;
+    font-weight: bold;
 }
 .clear{
     clear: both;
@@ -216,4 +218,8 @@ div.col-md-2{
     font-weight: bolder;
     font-size: medium;
     padding-top: 15px;
+}
+
+.tb_td td{
+    vertical-align: baseline;
 }

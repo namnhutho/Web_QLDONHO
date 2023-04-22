@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['dangnhap'])) {
+    header('Location:login.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +16,7 @@
     <link rel="shortcut icon" type="image/png" href="../images/logo1.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <link rel="stylesheet" style="text/css" href="./css/styleadmincp.css">
+    <link rel="stylesheet" href="./css/styleadmincp.css">
 </head>
 
 <body>

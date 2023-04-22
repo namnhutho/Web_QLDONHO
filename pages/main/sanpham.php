@@ -18,7 +18,7 @@ while ($row_chitiet = mysqli_fetch_array($query_chitiet)) {
                 <p>DANH MỤC SP: <?php echo $row_chitiet['LSP_TEN'] ?></p>
                 <p>MÃ SP: <?php echo $row_chitiet['SP_MASANPHAM'] ?></p>
                 <p>SỐ LƯỢNG SP: <?php echo $row_chitiet['SP_SOLUONG'] ?></p>
-                <p><input class="addtocart" id="them" type="submit" name="themgiohang" value="Thêm giỏ hàng"></p>
+                <p><input class=" btn btn-primary" id="them" type="submit" name="themgiohang" value="Thêm giỏ hàng"></p>
             </div>
         </form>
     </div>
